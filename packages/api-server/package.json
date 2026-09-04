@@ -1,0 +1,26 @@
+{
+  "name": "@sweepstakes/api-server",
+  "version": "1.0.0",
+  "description": "Express.js API server with game logic and admin endpoints",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.0",
+    "bcryptjs": "^2.4.3",
+    "@sweepstakes/db": "workspace:*",
+    "@sweepstakes/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0",
+    "tsx": "^3.12.0",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.0"
+  }
+}

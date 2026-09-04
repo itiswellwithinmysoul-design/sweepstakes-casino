@@ -1,0 +1,211 @@
+/* Admin Panel */
+.admin-panel {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.admin-header {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header h1 {
+  color: #2d3748;
+  font-size: 28px;
+}
+
+/* Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-tabs .tab {
+  padding: 10px 20px;
+  border: none;
+  background: #edf2f7;
+  color: #4a5568;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.admin-tabs .tab.active {
+  background: #667eea;
+  color: white;
+}
+
+.admin-tabs .tab:hover {
+  background: #cbd5e0;
+}
+
+.admin-tabs .tab.active:hover {
+  background: #5568d3;
+}
+
+/* Admin Content */
+.admin-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.admin-content h3 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* System Health */
+.system-health {
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.system-health h3 {
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.system-health ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.system-health li {
+  padding: 12px;
+  background: white;
+  border-radius: 5px;
+  border-left: 3px solid #667eea;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+/* Tables */
+.users-table,
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.users-table thead,
+.transactions-table thead {
+  background: #f7fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.users-table th,
+.transactions-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.users-table td,
+.transactions-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #2d3748;
+}
+
+.users-table tbody tr:hover,
+.transactions-table tbody tr:hover {
+  background: #f7fafc;
+}
+
+.users-table .btn-danger {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Stats Grid in Admin */
+.admin-content .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-content .stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.admin-content .stat-card h3 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.admin-content .stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .admin-header h1 {
+    font-size: 20px;
+  }
+
+  .admin-tabs {
+    flex-direction: column;
+  }
+
+  .admin-tabs .tab {
+    width: 100%;
+  }
+
+  .admin-content {
+    padding: 15px;
+  }
+
+  .admin-content .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .users-table,
+  .transactions-table {
+    font-size: 12px;
+  }
+
+  .users-table th,
+  .transactions-table th,
+  .users-table td,
+  .transactions-table td {
+    padding: 8px;
+  }
+}

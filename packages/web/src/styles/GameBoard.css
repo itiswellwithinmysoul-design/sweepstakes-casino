@@ -1,0 +1,172 @@
+/* Game Board */
+.game-board {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+}
+
+.game-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2d3748;
+  font-size: 36px;
+}
+
+/* Reels Display */
+.reels {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 30px 0;
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 200px;
+}
+
+.reel {
+  flex: 1;
+  background: linear-gradient(180deg, #e0e7ff 0%, #f3e8ff 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid #667eea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.symbols {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.symbol {
+  font-size: 32px;
+  text-align: center;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+
+.symbol.active {
+  opacity: 1;
+  transform: scale(1.2);
+  background: #ffd93d;
+  font-weight: bold;
+}
+
+/* Controls */
+.controls {
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #4a5568;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+}
+
+.paylines-selector {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.paylines-selector label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.paylines-selector input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.btn-spin {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Results */
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.result.win {
+  background: #c6f6d5;
+  color: #22543d;
+  border: 2px solid #48bb78;
+}
+
+.result.win h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.result.lose {
+  background: #fed7d7;
+  color: #742a2a;
+  border: 2px solid #f56565;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .game-container {
+    padding: 20px;
+  }
+
+  .game-container h1 {
+    font-size: 24px;
+  }
+
+  .reels {
+    gap: 5px;
+    padding: 15px;
+  }
+
+  .symbol {
+    font-size: 24px;
+  }
+
+  .paylines-selector {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "sweepstakes-casino-root",
+  "version": "0.1.0",
+  "description": "Sweepstakes Casino Engine",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "build": "pnpm run typecheck && pnpm -r --parallel run build",
+    "typecheck": "pnpm -r run typecheck",
+    "lint": "pnpm -r run lint",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "typescript": "^5.9.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "typescript": "^5.9.0"
+    }
+  }
+}
